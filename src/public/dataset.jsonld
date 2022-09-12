@@ -1,0 +1,8 @@
+{
+    "@context" : {
+        "man": "http://localhost:4000/manifest.jsonld#",
+        "clinicalData": "man:cdiscData",
+        "referenceData": "man:cdiscData",
+        "@vocab": "http://localhost:4000/manifest.jsonld#"
+    }
+}

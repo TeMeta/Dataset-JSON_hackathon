@@ -1,0 +1,49 @@
+{
+    "@context" : {
+        "@version": 1.1,
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "man": "http://localhost:4000/manifest.jsonld#",
+        "cdiscData": "@nest",
+        "studyOID": {
+            "@id": "schema:identifier",
+            "@type": "@id",
+            "@nest": "cdiscData"
+        },
+        "metaDataVersionOID": {
+            "@id": "schema:identifier",
+            "@type": "@id",
+            "@nest": "cdiscData"
+        },
+        "itemGroupData" : {
+            "@id": "schema:identifier",
+            "@container": "@index",
+            "@type": "man:datasetMetadata",
+            "@nest": "cdiscData"
+        },
+        "items" : {
+            "@id": "man:datasetMetadata",
+            "@container" : "@index",
+            "@type": "schema:PropertyValue"
+        },
+        "itemData" : {
+            "@id": "schema:Dataset",
+            "@container" : "@index",
+            "@type": "schema:variableMeasured"
+        },
+        "OID": {
+            "@id" : "schema:identifier",
+            "@type" : "@id"
+        },
+        "records": {
+            "@id": "schema:maxValue",
+            "@type": "xsd:integer"
+        },
+        "name" : {
+            "@id": "schema:name",
+            "@type": "@id"
+        },
+        "label": "schema:description",
+        "type": "schema:Class"
+    }
+}
