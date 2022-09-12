@@ -34,11 +34,6 @@ app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodie
   app.use(serveIndex(dist, { 'icons': true }));
 })();
 
-// Serve views/index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
-
 // Return data
 app.get("/example_ae", (req, res) => {
   res.send(path.join(__dirname, "..", "data", "ae_example.json"));
