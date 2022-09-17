@@ -1,0 +1,82 @@
+{
+    "@context": {
+    "@base": "http://localhost:4000/transfer_104ab4/DM/",
+    "@vocab": "http://localhost:4000/define_BS1234_v2#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "id": "@id",
+    "ID": "@id",
+    "oid": "@id",
+    "OID": "@id",
+    "dataCatalog": "@nest",
+    "clinicalData": {
+      "@id": "dataCatalog",
+      "@type": "schema:dataCatalog"
+    },
+    "referenceData": {
+      "@id": "dataCatalog",
+      "@type": "schema:DataCatalog"
+    },
+    "studyOID": {
+      "@id": "schema:MedicalStudy",
+      "@type": "schema:code"
+    },
+    "metaDataVersionOID": {
+      "@id": "schema:Version"
+    },
+    "itemGroupData": {
+      "@container": "@index",
+      "@id": "schema:Dataset"
+    },
+    "items": {
+      "@container": "@index",
+      "@id": "items"
+    },
+    "itemData": {
+      "@container": "@list",
+      "@id": "schema:DataFeed"
+    },
+    "records": {
+      "@id": "schema:maxValue",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "schema:PropertyValue"
+    },
+    "label": {
+      "@id": "schema:description",
+      "@type": "schema:PropertyValue"
+    },
+    "type": {
+      "@id": "schema:DataType",
+      "@type": "schema:PropertyValue"
+    },
+    "length": {
+      "@id": "xsd:length",
+      "@type": "xsd:nonNegativeInteger"
+    }
+  },
+  "clinicalData": {
+    "studyOID": "BS1234",
+    "metaDataVersionOID": "v2",
+    "itemGroupData": {
+        "IG.DM": {
+            "records": 600,
+            "name": "DM",
+            "label": "Demographics",
+            "items": [                      
+                {"OID": "ITEMGROUPDATASEQ", "name": "ITEMGROUPDATASEQ", "label": "Record identifier", "type": "integer"},
+                {"OID": "IT.STUDYID", "name": "STUDYID", "label": "Study identifier", "type": "string", "length": 7},
+                {"OID": "IT.USUBJID", "name": "USUBJID", "label": "Unique Subject Identifier", "type": "string", "length": 3},
+                {"OID": "IT.DOMAIN", "name": "DOMAIN", "label": "Domain Identifier", "type": "string", "length": 2},
+                {"OID": "IT.AGE", "name": "AGE", "label": "Subject Age", "type": "integer", "length": 2}
+            ],
+            "itemData": [
+                [1, "MyStudy", "001", "DM", 56],
+                [2, "MyStudy", "002", "DM", 26]
+            ]
+        }
+    }
+  }
+}

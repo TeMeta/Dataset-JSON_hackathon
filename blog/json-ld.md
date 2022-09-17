@@ -1,7 +1,7 @@
 # The next-generation Define using JSON with Linked Data
 Why can't Define be a URL?
   
-Can we have  ODMv2 join with the semantic web?
+Can we have ODMv2 join with the semantic web?
 
 How can we make partial datasets self-descriptive without bloat?
   

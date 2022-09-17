@@ -1,0 +1,168 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "#",
+    "def": "http://localhost:4000/define#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "definedBy": {
+      "@id": "rdfs:isDefinedBy",
+      "@type": "@id"
+    },
+    "domain": {
+      "@id": "schema:domainIncludes",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "schema:rangeIncludes",
+      "@type": "@id"
+    },
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "title": "schema:title",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "id": "@id"
+  },
+
+  "@graph": [
+    {
+      "comment": "This JSON-LD graph was made as a PoC for the CDISC Open Source Alliance Dataset-JSON hackathon ",
+      "creator": [
+          {"@type": "foaf:Person", "foaf:name": "Jeremy Teoh"},
+          {"@type": "foaf:Person", "foaf:name": "<more contributors encouraged!>" }
+      ],
+      "id": "def:",
+      "modified": "2022-09-16",
+      "title": "Define-LD Proof of Concept",
+      "type": "owl:Ontology",
+      "version": "2022-09-16"
+    },
+    {
+      "comment": "Container for of 1 or more tabular datasets containing data",
+      "id": "def:dataCatalog",
+      "definedBy": "def:",
+      "label": "CDISC Transport Container",
+      "subClassOf": "schema:DataCatalog",
+      "@type": "rdfs:Class"
+    },
+    {
+      "comment": "1 or more datasets containing Clinical Trial Patient Data",
+      "id": "def:clinicalData",
+      "definedBy": "def:",
+      "label": "Clinical Trial Patient Data",
+      "subClassOf": "def:dataCatalog",
+      "@type": "rdfs:Class"
+    },
+    {
+      "comment": "1 or more datasets containing Clinical Trial Reference (i.e. non-patient) Data",
+      "id": "def:referenceData",
+      "definedBy": "def:",
+      "label": "CDISC Clinical Trial Reference Data",
+      "subClassOf": "def:dataCatalog",
+      "@type": "rdfs:Class"
+    },
+    {
+      "comment": "Study ID that the local datasets and below are associated with",
+      "id": "def:studyOID",
+      "definedBy": "def:",
+      "domain": [
+        "def:dataCatalog",
+        "schema:MedicalStudy"
+      ],
+      "label": "Study ID",
+      "range": "schema:MedicalCode",
+      "@type": "rdf:Property"
+    },
+    {
+      "comment": "Version of Define metadata that the local datasets and below are associated with",
+      "id": "def:metaDataVersionOID",
+      "definedBy": "def:",
+      "domain": "def:metaDataVersionOID",
+      "label": "Define metadata version",
+      "range": [
+        "schema:version",
+        "schema:url"
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "comment": "Dataset contents: data, with optional metadata for use cases without access to the Define",
+      "id": "def:itemGroupData",
+      "definedBy": "def:",
+      "label": "Dataset",
+      "subClassOf": "schema:Dataset",
+      "@type": "rdfs:Class"
+    },
+    {
+      "comment": "Variable Metadata for dataset columns",
+      "id": "def:items",
+      "definedBy": "def:",
+      "label": "Variable Metadata",
+      "subClassOf": "schema:VariableMeasured",
+      "@type": "rdfs:Class"
+    },
+    {
+      "comment": "Variable object identifier for dataset columns",
+      "id": "def:OID",
+      "domain": "def:items",
+      "definedBy": "def:",
+      "label": "Variable ID",
+      "@type": "@id"
+    },
+    {
+      "comment": "Number of records in dataset/subset/slice",
+      "id": "def:records",
+      "definedBy": "def:",
+      "domain": [
+        "def:itemGroupData",
+        "def:itemData"
+      ],
+      "label": "Number of records",
+      "range": "xsd:nonNegativeInteger",
+      "@type": "rdf:Property"
+    },
+    {
+      "comment": "Name of variable/field/column",
+      "id": "def:name",
+      "definedBy": "def:",
+      "domain": "def:OID",
+      "label": "Name",
+      "range": "schema:Text",
+      "@type": "rdf:Property"
+    },
+    {
+      "comment": "Type of variable/field/column",
+      "id": "def:dataType",
+      "definedBy": "def:",
+      "domain": "def:OID",
+      "label": "Type",
+      "range": [
+        "schema:Text",
+        "schema:url",
+        "schema:DataType"
+      ],
+      "@type": "rdf:Property"
+    },
+    {
+      "comment": "Length of variable/field/column",
+      "id": "def:length",
+      "definedBy": "def:",
+      "domain": "def:OID",
+      "label": "Length",
+      "range": "xsd:nonNegativeInteger",
+      "@type": "rdf:Property"
+    }
+  ]
+}
