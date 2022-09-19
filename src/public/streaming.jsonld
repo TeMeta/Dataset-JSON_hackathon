@@ -1,0 +1,20 @@
+{
+    "@context": {
+      "@version": 1.1,
+      "schema": "http://schema.org/",
+      "dataCatalog": "@nest",
+      "clinicalData": "dataCatalog",
+      "itemGroupData": {
+        "@id": "schema:Dataset",
+        "@container": "@index"
+      },
+      "itemData": {
+        "@id": "schema:DataStream",
+        "@container": "@list"
+      },
+      "records": {
+        "@id": "schema:maxValue",
+        "@type": "xsd:nonNegativeInteger"
+      }
+    }
+}

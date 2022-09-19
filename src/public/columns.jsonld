@@ -1,0 +1,55 @@
+{
+    "@context": {
+      "@version": 1.1,
+      "schema": "http://schema.org/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "ID": "@id",
+      "oid": "@id",
+      "OID": "@id",
+      "data": "@nest",
+      "clinicalData": {
+        "@id": "data",
+        "@type": "schema:DataCatalog"
+      },
+      "referenceData": {
+        "@id": "data",
+        "@type": "schema:DataCatalog"
+      },
+      "studyOID": {
+        "@id": "schema:MedicalStudy",
+        "@type": "schema:code"
+      },
+      "metaDataVersionOID": {
+        "@id": "schema:Version"
+      },
+      "itemGroupData": {
+        "@container": "@index",
+        "@id": "schema:Dataset"
+      },
+      "items": {
+        "@container": "@index",
+        "@id": "schema:VariableMeasured"
+      },
+      "records": {
+        "@id": "schema:maxValue",
+        "@type": "xsd:nonNegativeInteger"
+      },
+      "name": {
+        "@id": "schema:name",
+        "@type": "schema:PropertyValue"
+      },
+      "label": {
+        "@id": "schema:description",
+        "@type": "schema:PropertyValue"
+      },
+      "type": {
+        "@id": "schema:DataType",
+        "@type": "schema:PropertyValue"
+      },
+      "length": {
+        "@id": "xsd:length",
+        "@type": "xsd:nonNegativeInteger"
+      }
+    }
+}
