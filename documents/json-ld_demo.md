@@ -67,7 +67,7 @@ Different contexts can be applied to the same dataset e.g.
 
 [Same dataset contextualised as column metadata](https://tinyurl.com/55y6z56v)
 
-[Same dataset with including a @graph](https://tinyurl.com/y29cmux7)
+[Same dataset including a @graph](https://tinyurl.com/y29cmux7)
 
 ## Example of how JSON-LD files provide context
 Identify the JSON transfer
