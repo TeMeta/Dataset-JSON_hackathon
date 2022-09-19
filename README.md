@@ -2,8 +2,8 @@
 
 This repository should be used for the [CDISC Open Source Alliance's Dataset-JSON Hackathon](https://wiki.cdisc.org/display/DSJSONHACK) to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
 
-<img src="./images/cosa-logo.png" alt="JSON-LD logo" width="100"/>
-<img src="./images/ds-json-hackathon-logo.png" alt="JSON-LD logo" width="100"/>
+<img src="./images/cosa-logo.png" alt="CDISC Open Source Alliance logo" width="100"/>
+<img src="./images/ds-json-hackathon-logo.png" alt="Dataset-JSON Hackathon logo" width="100"/>
 <img src="./images/json-ld-logo.svg" alt="JSON-LD logo" width="100"/>
 
 ## Description
