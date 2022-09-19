@@ -89,3 +89,15 @@ How JSON-LD links Dataset-JSON content all the way to the semantic web:
 * Only expresses the triples contained within the document. To infer more it would have to be deserialized into graph
 * It's quite new - CDISC has historically leaned heavily on XML.
 
+# Recommend also taking a look at ...
+[JSON-LD Playground](https://json-ld.org/playground)
+
+[JSON-LD Spec](https://www.w3.org/TR/json-ld11/)
+
+[Open-source Clinical Trial Tools](https://www.glacon.eu/portal/overviewVisual)
+
+[JSON-LD Demo Server Setup (this project)](instructions.md)
+
+[JSON-LD Demos (this project)](json-ld_demo.md)
+
+[Homepage (this project)](../README.md)

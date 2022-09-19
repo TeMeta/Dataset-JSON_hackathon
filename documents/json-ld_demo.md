@@ -142,3 +142,16 @@ By adding `@context` that refers to the applicable Define as a graph, the Datase
 # 7. Combine with the Define-LD graph to make results searchable over graph
 
 # 8. Perform graph queries on a simple metamodel
+
+# Recommend also taking a look at ...
+[JSON-LD Playground](https://json-ld.org/playground)
+
+[JSON-LD Spec](https://www.w3.org/TR/json-ld11/)
+
+[Open-source Clinical Trial Tools](https://www.glacon.eu/portal/overviewVisual)
+
+[JSON-LD Overview (this project)](json-ld.md)
+
+[JSON-LD Demo Server Setup (this project)](instructions.md)
+
+[Homepage (this project)](../README.md)

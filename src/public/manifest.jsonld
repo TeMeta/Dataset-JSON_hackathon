@@ -57,27 +57,5 @@
       "@id": "xsd:length",
       "@type": "xsd:nonNegativeInteger"
     }
-  
-    "fileType": ,
-    "fileOID": ,
-    "priorFileOID": ,
-    "creationDateTime": "schema:modifiedTime",
-    "asOfDateTime": "schema:dateCreated",
-    "originator": ,
-    "sourceSystem": ,
-    "sourceSystemVersion": ,
-    "datasetJsonVersion":
-  },
-  "manifest": {
-    "fileType": ,
-    "fileType": ,
-    "fileOID": ,
-    "priorFileOID": ,
-    "creationDateTime": ,
-    "asOfDateTime": ,
-    "originator": ,
-    "sourceSystem": ,
-    "sourceSystemVersion": ,
-    "datasetJsonVersion":
   }
 }

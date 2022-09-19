@@ -1,38 +1,34 @@
-# COSAWorkshopTemplate
+#  Dataset-JSON Define-LD Demo
 
-This is a template for COSA workshops/open source projects which could be used to create new projects.
+This repository should be used for the [CDISC Open Source Alliance's Dataset-JSON Hackathon](https://wiki.cdisc.org/display/DSJSONHACK) to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
 
-## How to use this template (remove this section)
-
-You can copy this template and use this for your open source project, workshops, hackathons or similar where participants should contribute content. Please update the README and other files depending on your requirements, project description etc. You find various "How Tos" documents if you or your expected contributors are not familar with setting up and working with repositories. Feel free to remove no longer applicable ones for your own repository.
-
-You might want to checkout [makeareadme.com](https://www.makeareadme.com) to gain additional guidance and options for a typical README file.
-
-![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)
-
-**License**: This template is using [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). So you can copy or fork this template without the need to reference. Keep attribution from CODE_OF_CONDUCT as this uses CC-BY-4.0. The license files contained are meant to be used for the final open source project you run.
-
-TODO:
-
-* update readme for your project needs, e.g. use CC0 or CC-BY-4.0 license
-* update LICENSE, [INCLUDE COPYRIGHT INSTANCE] -> e.g. Project XY, CDISC, John Doe
-* update CODE_OF_CONDUCT, [INSERT CONTACT METHOD] -> e.g. <example@example.com>
-* update CONTRIBUTION.md if you want to provide additional rules or guidances, for example naming conventions
-
-*-------------------------- DELETE EVERYTHIG ABOVE ---------------------------*
-
-
-# *NAME* 
-
-This repository should be used for the *Project/Workshop/Hackathon XY* to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
+<img src="./images/cosa-logo.png" alt="JSON-LD logo" width="100"/>
+<img src="./images/ds-json-hackathon-logo.png" alt="JSON-LD logo" width="100"/>
+<img src="./images/json-ld-logo.svg" alt="JSON-LD logo" width="100"/>
 
 ## Description
+The main purpose of Dataset-JSON Define-LD demo is to investigate ways in which the 
+<a href="https://json-ld.org/" title="JSON-LD"><img style="border:0px;" width="88" src="https://json-ld.org/images/json-ld-button-88.png" alt="JSON-LD-logo-88"/></a> format can be leveraged in tandem with CDISC Datasets as JSON.
 
-The main purpose of *Project Name* is to ....
+* [Dataset-JSON](https://wiki.cdisc.org/display/DSJSONHACK) is a new format being designed for a more interoperable way to communicate clinical data. 
+* [JSON-LD](https://www.w3.org/TR/json-ld11/) may be able to complete the picture. 
 
-If possible use images as well.
+**By imagining Dataset-JSON as the compacted form of a JSON-LD graph, a single machine-readable reference included in the Dataset-JSON can provide a complete description of the transfer.**
 
-![Image Description](./images/placeholder.png)
+```js
+"@context": "https://mdr.cdisc.org/transfer_104ab4/define_BS1234_v2#"
+```
+
+The referenced address would be the Define (or a transfer manifest referencing the Define) in the form of a JSON-LD, contextualising the Dataset-JSON contents into ODMv2 graph form
+
+Have your cake and eat it! Simple streamable datasets for transport, linked explicitly to a single source of truth. A complete metadata picture that can allows the data to be queried and exported as a graph
+
+See [Instructions](documents/instructions.md) to set up and run the demo server
+
+See [JSON-LD Overview](documents/json-ld.md) to learn more about how this project proposes to apply JSON-LD to CDISC data and metadata
+
+See [JSON-LD Demo](documents/json-ld_demo.md) to go through some examples and interact with them via the JSON-LD Playground tool
+
 
 ## Contribution
 
@@ -56,7 +52,7 @@ When you re-use the source, keep or copy the license information also in the sou
 
 When you want to re-use and refer to the content, please do so like the following:
 
-> Content based on [Project XY (GitHub)](https://github.com/xy/xy) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+> Content based on [Dataset-JSON Define-LD Demo (GitHub)](https://github.com/TeMeta/Dataset-JSON_hackathon) used under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
 
 
