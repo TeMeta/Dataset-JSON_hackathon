@@ -4,8 +4,8 @@ const {jsonld2obj, autoSimplifier, mutateGraphKeys} = require("jsonld-object-gra
 var stringify = require('json-stringify-safe');
 
 // Interpret a given JSON-LD dataset
-// @param sample JSON-LD dataset
-// @param return {expanded JSON-LD URIs, compacted view}
+// @param {object} sample JSON-LD dataset
+// @return {object} {expanded JSON-LD URIs, compacted view}
 async function readContext(sample) {
     const json_context = fetch('http://localhost:4000/dataset.jsonld').json()
     const expanded = await jsonld.expand(sample);
@@ -13,18 +13,9 @@ async function readContext(sample) {
     return {expanded, compacted}
 }
 
-async function expand(sample) {
-    const expanded = await jsonld.expand(sample);
-    console.log(JSON.stringify(expanded, null, 2))
-    return expanded;
-}
-
-async function compact(sample, context) {
-    const compacted = await jsonld.compact(sample, schema);
-    console.log(JSON.stringify(compacted, null, 2))
-    return compacted;
-}
-
+// Test JSON-LD to Plain Old Javascript object creator
+// @param {object} sample JSON-LD dataset
+// @return {object} sample JSON-LD dataset
 async function toObject(sample) {
     const graph = await jsonld2obj(sample);
     mutateGraphKeys(autoSimplifier)(graph);
@@ -34,12 +25,14 @@ async function toObject(sample) {
     return graph;
 }
 
+
+// Turn CDISC Dataset-JSON object into a JSON-LD object.
+// This is generic. For study-specific specs, provide a custom Define context
+// @param {object} CDISC JSON dataset
+// @return {object} JSON-LD dataset
 function addContext(obj) {
     obj['@context'] = "http://localhost:4000/define#"
     return obj
 }
 
-
-// TODO function
-
-module.exports = { readContext, expand, addContext, toObject }
+module.exports = { readContext, toObject, addContext }
