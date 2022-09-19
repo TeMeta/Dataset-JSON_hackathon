@@ -1,17 +1,3 @@
 {
-    "@context": [
-        "http://schema.org",
-        { "@vocab" : "http://localhost:4000/manifest.jsonld#" },
-        {
-            "@version": 1.1,
-            "ds": "http://localhost:4000/dataset.jsonld#",
-            "man": "http://localhost:4000/manifest.jsonld#",
-            "schema": "http://schema.org#",
-            "itemData": {
-                "@id": "ds:Dataset",
-                "@container": "@index",
-                "@type": "schema:PropertyValue"
-            }
-        }
-    ]
+    "@context": { "@vocab" : "http://localhost:4000/manifest.jsonld#" }
 }
