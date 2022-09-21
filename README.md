@@ -31,6 +31,7 @@ See [JSON-LD Overview](documents/json-ld.md) to learn more about how this projec
 
 See [JSON-LD Demo](documents/json-ld_demo.md) to go through some examples and interact with them via the JSON-LD Playground tool
 
+See [Define-LD Overview](documents/define-ld.md) (in progress) to see how JSON-LD can be applied to Define to make it more interoperable
 
 ## Contribution
 

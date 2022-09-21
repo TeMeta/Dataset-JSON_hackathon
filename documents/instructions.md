@@ -55,7 +55,7 @@ and take a look `ls` at the different views of the data that were created by the
 
 Even with helper functions added, the Define-JSON file [`907KB`] is a that smaller than the original `.xml` file [`1,267KB`] that it was converted from. The content is preserved while tweaking the structure slightly to reflect the graph objects identified.
 
-The expanded form of is a primitive Define-LD and can be further contextualized by inclusion of a `@graph` JSON-LD object. These can then be framed and combined with other sources such as Dataset-JSON.
+The expanded form is a primitive Define-LD and can be further contextualized by inclusion of a `@graph` JSON-LD object. These can then be framed and combined with other sources such as Dataset-JSON.
 
 
 # Recommend also taking a look at ...
@@ -68,5 +68,7 @@ The expanded form of is a primitive Define-LD and can be further contextualized 
 [JSON-LD Overview (this project)](json-ld.md)
 
 [JSON-LD Demos (this project)](json-ld_demo.md)
+
+[Define-LD Overview (in progress)](define-ld.md)
 
 [Homepage (this project)](../README.md)

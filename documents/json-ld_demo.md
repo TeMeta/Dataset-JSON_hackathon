@@ -153,4 +153,6 @@ By adding `@context` that refers to the applicable Define as a graph, the Datase
 
 [JSON-LD Demo Server Setup (this project)](instructions.md)
 
+[Define-LD Overview (in progress)](define-ld.md)
+
 [Homepage (this project)](../README.md)

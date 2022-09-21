@@ -100,4 +100,6 @@ How JSON-LD links Dataset-JSON content all the way to the semantic web:
 
 [JSON-LD Demos (this project)](json-ld_demo.md)
 
+[Define-LD Overview (in progress)](define-ld.md)
+
 [Homepage (this project)](../README.md)
