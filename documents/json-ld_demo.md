@@ -1,16 +1,15 @@
-# 1. Start with a simple JSON Dataset
+# 1. Start with a JSON Dataset
 
         "clinicalData": {
                 "studyOID": "BS1234",
                 "metaDataVersionOID": "v2",
                 "itemGroupData": ...
 
-That can be turned into a single line added to the top of the file that points to the relevant Specification IRI. 
+Imagine the Dataset-JSON as a compacted serialisation of a detailed RDF knowledge graph describing the study data. A reference to a specification IRI needs adding to provide context to the JSON.
 
         "@context": "http://localhost:4000/define_BS1234_v2.jsonld"
 
-Presence of explicit context makes optional Dataset-JSON content redundant except for dataset ID and itemData
-
+Note that Presence of explicit context makes most Dataset-JSON metadata optional except for dataset ID and itemData
 
 # 2. Express as JSON-LD objects
 
@@ -19,6 +18,11 @@ An ID can be added to Dataset-JSON via `@id`. This example content originates fr
         "@id": "https://wiki.cdisc.org/pages/viewpage.action?spaceKey=ODM2&title=Dataset-JSON",
 
 This ID applies to this Dataset-JSON object as a whole, serving as a root. The `"@context"` applies an unambiguous semantic ID to all content within the Dataset-JSON
+
+The `@type` tag provides a way of describing the contents according to the JSON-LD graph. 
+* JSON-Schema governs the values of the contents
+* JSON-LD governs the meaning of the contents
+* SHACL applied to RDF deserialised from JSON-LD governs the shape of contents
 
 For example, defining familiar name `itemData` as a `@container` of type `@list` tells the JSON-LD processor that
 * order of JSON content within must be preserved
@@ -137,11 +141,25 @@ Everything in the JSON-LD can be used to expand the Dataset-JSON content into me
 
 By adding `@context` that refers to the applicable Define as a graph, the Dataset-JSON content can be transformed into meaningful nodes and relationships.
 
+Take a look at examples available via the server
+* output_expanded.json (Dataset-JSON on the semantic web)
+* output_compacted.json (verify integrity of context definition by round-tripping)
+* output_expanded_define.json (cdisc metadata on the semantic web)
+* output_compacted_define.json (accessible JS Object for API)
+
 # 6. Store n-quads into database (graph and relational)
+Take a look at example available on the server
+* output_rdf_normalised.json
+* output_rdf_simple.json
 
 # 7. Combine with the Define-LD graph to make results searchable over graph
+TODO
 
 # 8. Perform graph queries on a simple metamodel
+TODO
+
+# 9. Apply SHACL rules to ODMv2 / Datase-JSON metamodel
+TODO
 
 # Recommend also taking a look at ...
 [JSON-LD Playground](https://json-ld.org/playground)
@@ -153,5 +171,7 @@ By adding `@context` that refers to the applicable Define as a graph, the Datase
 [JSON-LD Overview (this project)](json-ld.md)
 
 [JSON-LD Demo Server Setup (this project)](instructions.md)
+
+[Define-LD Overview (in progress)](define-ld.md)
 
 [Homepage (this project)](../README.md)

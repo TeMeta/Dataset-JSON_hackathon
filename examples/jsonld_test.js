@@ -1,6 +1,6 @@
 // Test created JSON-LD contexts against Dataset-JSON
 const path = require('path')
-const ld = require(path.join(module.path, '..', 'src', 'utils', 'define_ld_helpers.js'));
+const ld = require(path.join(module.path, '..', 'src', 'utils', 'json_ld_helpers.js'));
 const fs = require('fs');
 
 const sample = require(path.join(module.path, '..', 'src', 'public', 'transfer_104ab4/DM.json'));
