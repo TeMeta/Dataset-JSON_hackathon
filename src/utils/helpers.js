@@ -21,17 +21,17 @@ exports.downloadFile = (async (url, path) => {
         res.body.pipe(fileStream);
         res.body.on("error", reject);
         fileStream.on("finish", resolve);
-      });
-  });
+    });
+});
 
-exports.modifyObjects = function(obj, key, val, newVal) {
+exports.modifyObjects = function (obj, key, val, newVal) {
     for (var k in obj) {
         if (!obj.hasOwnProperty(k)) continue;
 
         const nestedObj = obj[k]
 
         // recurse through nested JSON
-        if (typeof(nestedObj) === 'object' || Array.isArray(nestedObj)) {
+        if (typeof (nestedObj) === 'object' || Array.isArray(nestedObj)) {
             modifyObjects(obj, nestedObj, key)
         }
 
@@ -42,14 +42,14 @@ exports.modifyObjects = function(obj, key, val, newVal) {
     return obj
 }
 
-const getValues = function(array, obj, key) {
+const getValues = function (array, obj, key) {
     for (var k in obj) {
         if (!obj.hasOwnProperty(k)) continue;
-        
+
         const nestedObj = obj[k]
 
         // recurse through nested JSON
-        if (typeof(nestedObj) === 'object' || Array.isArray(nestedObj)) {
+        if (typeof (nestedObj) === 'object' || Array.isArray(nestedObj)) {
             getValues(array, nestedObj, key)
         }
 
@@ -60,7 +60,7 @@ const getValues = function(array, obj, key) {
     return array
 }
 
-exports.getUniqueValues = function(obj, key) {
+exports.getUniqueValues = function (obj, key) {
     const values = getValues([], obj, key)
     return values.filter(
         (v, i, a) => a.indexOf(v) === i);
@@ -68,5 +68,27 @@ exports.getUniqueValues = function(obj, key) {
 
 // Return paths of data folder
 exports.getFileOnly = function (str) {
-  return str.split('\\').pop().split('/').pop();
+    return str.split('\\').pop().split('/').pop();
 }
+
+function removeKeys(obj, keys) {
+    for (var prop in obj) {
+        if(obj.hasOwnProperty(prop)) {
+            switch(typeof(obj[prop])) {
+                case 'object':
+                    if(keys.indexOf(prop) > -1) {
+                        delete obj[prop];
+                    } else {
+                        removeKeys(obj[prop], keys);
+                    }
+                    break;
+              default:
+                    if(keys.indexOf(prop) > -1) {
+                        delete obj[prop];
+                    }
+                    break;
+            }
+        }
+    }
+}
+module.exports.removeKeys = removeKeys

@@ -1,0 +1,136 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "def": "http://localhost:4000/define#",
+        "@vocab": "def:",
+        "@base": "http://localhost:4000/example/",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "oid": "@id",
+        "data": "@nest",
+        "study": "@nest",
+        "codedValue": "@id",
+        "description": "schema:description",
+        "value": "schema:Value",
+        "clinicalData": {
+            "@id": "data",
+            "@type": "schema:DataCatalog"
+        },
+        "referenceData": {
+            "@id": "data",
+            "@type": "schema:DataCatalog"
+        },
+        "studyOID": {
+            "@id": "schema:MedicalStudy",
+            "@type": "schema:code"
+        },
+        "metaDataVersionOID": {
+            "@id": "schema:Version",
+            "@type": "@id"
+        },
+        "itemGroupData": {
+            "@container": "@index",
+            "@id": "schema:Dataset"
+        },
+        "items": {
+            "@container": "@index",
+            "@id": "items"
+        },
+        "itemData": {
+            "@container": "@list",
+            "@id": "schema:DataFeed"
+        },
+        "records": {
+            "@id": "schema:maxValue",
+            "@type": "xsd:nonNegativeInteger"
+        },
+        "name": {
+            "@id": "schema:name",
+            "@type": "schema:PropertyValue"
+        },
+        "label": {
+            "@id": "schema:description",
+            "@type": "schema:PropertyValue"
+        },
+        "type": {
+            "@id": "schema:DataType",
+            "@type": "schema:PropertyValue"
+        },
+        "length": {
+            "@id": "xsd:length",
+            "@type": "xsd:nonNegativeInteger"
+        },
+
+        "metaDataVersion": "@nest",
+        "TYPE_NAME": "@type",
+        "lang": "@language",
+        
+        "translatedText": {
+            "@container": "@language",
+            "@id": "schema:PropertyValue"
+        },
+        
+        "itemGroupDef": {
+            "@container": ["@id", "@set"],
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionItemGroupDef"
+        },
+        "itemDef": {
+            "@container": ["@id", "@set"],
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionItemDef"
+        },
+        "methodDef": {
+            "@container": ["@id", "@set"],
+            "@id": "define2_1_0.ODMcomplexTypeDefinitionMethodDef"
+        },
+        "codelistDef": {
+            "@container": ["@id", "@set"],
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionCodeListDef"
+        },
+        "itemRef": {
+            "@container": "@list",
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionItemRef"
+        },
+        "codeListRef": {
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionCodeListRef",
+            "@type": "@id"
+        },
+        "codeList": {
+            "@container": ["@id", "@set"],
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionCodeList"
+        },
+        "codeListItem": {
+            "@container": "@id",
+            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionCodeListItem"
+        },
+
+        "itemOID": {
+            "@id": "def:itemOID",
+            "@type": "@id"
+        },
+        "methodOID": {
+            "@id": "def:methodOID",
+            "@type": "@id"
+        },        
+        "codeListOID": {
+            "@id": "def:codelistOID",
+            "@type": "@id"
+        },
+        
+        "odmVersion": "schema:Version",
+        "fileType": {
+            "@id": "schema:Class",
+            "@type": "schema:DataDownload"
+        },
+        "fileOID": "@id",
+        "creationDateTime": "schema:dateCreated",
+        "year": null,
+        "month": null,
+        "day": null,
+        "hour": null,
+        "minute": null,
+        "second": null,
+        "fractionalSecond": null,
+        "timezone": null,
+        "date": "xsd:dateTime"
+    }
+}

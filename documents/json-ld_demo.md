@@ -1,16 +1,15 @@
-# 1. Start with a simple JSON Dataset
+# 1. Start with a JSON Dataset
 
         "clinicalData": {
                 "studyOID": "BS1234",
                 "metaDataVersionOID": "v2",
                 "itemGroupData": ...
 
-That can be turned into a single line added to the top of the file that points to the relevant Specification IRI. 
+Imagine the JSON as a compacted serialisation of am explicit and fully-detailed knowledge graph. The most efficient way to make everything explict is by adding a single line added to the top of the file that points to the relevant Specification IRI. 
 
         "@context": "http://localhost:4000/define_BS1234_v2.jsonld"
 
-Presence of explicit context makes optional Dataset-JSON content redundant except for dataset ID and itemData
-
+Note that Presence of explicit context makes most Dataset-JSON metadata optional except for dataset ID and itemData
 
 # 2. Express as JSON-LD objects
 
