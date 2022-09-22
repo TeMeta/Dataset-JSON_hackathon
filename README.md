@@ -23,7 +23,7 @@ The main purpose of Dataset-JSON Define-LD demo is to investigate ways in which 
 
 The referenced address would be the Define (or a transfer manifest referencing the Define) in the form of a JSON-LD, contextualising the Dataset-JSON contents into ODMv2 graph form
 
-Have your cake and eat it! Simple streamable datasets for transport, linked explicitly to a single source of truth. A complete metadata picture that can allows the data to be queried and exported as a graph
+Have your cake and eat it! Simple streamable datasets for transport, linked explicitly to a single source of truth. A complete metadata picture that allows the data to be queried and exported as a graph
 
 See [Instructions](documents/instructions.md) to set up and run the demo server
 
