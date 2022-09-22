@@ -1,13 +1,17 @@
 # 1. Start with a JSON Dataset
 
-        "clinicalData": {
-                "studyOID": "BS1234",
-                "metaDataVersionOID": "v2",
-                "itemGroupData": ...
+```json
+"clinicalData": {
+        "studyOID": "BS1234",
+        "metaDataVersionOID": "v2",
+        "itemGroupData": ...
+```
 
 Imagine the Dataset-JSON as a compacted serialisation of a detailed RDF knowledge graph describing the study data. A reference to a specification IRI needs adding to provide context to the JSON.
 
-        "@context": "http://localhost:4000/define_BS1234_v2.jsonld"
+```json
+"@context": "http://localhost:4000/transfer_104ab4/define_BS1234_v2.jsonld"
+```
 
 Note that Presence of explicit context makes most Dataset-JSON metadata optional except for dataset ID and itemData
 
@@ -15,7 +19,9 @@ Note that Presence of explicit context makes most Dataset-JSON metadata optional
 
 An ID can be added to Dataset-JSON via `@id`. This example content originates from the Dataset-JSON hackathon wiki so
 
-        "@id": "https://wiki.cdisc.org/pages/viewpage.action?spaceKey=ODM2&title=Dataset-JSON",
+```json
+"@id": "https://wiki.cdisc.org/pages/viewpage.action?spaceKey=ODM2&title=Dataset-JSON",
+```
 
 This ID applies to this Dataset-JSON object as a whole, serving as a root. The `"@context"` applies an unambiguous semantic ID to all content within the Dataset-JSON
 
@@ -36,21 +42,22 @@ Manifest includes all metadata items that could be included in a Dataset-JSON. M
 Dataset.jsonld includes the data items. It is intended to be compatible with any amount of metadata inclusion in the JSON-LD (works with plain itemData list of lists, or with included itemGroupData)
 
 # 3. Create a new context to describe Dataset-JSON, and transfer manifest, Define
-
-        "clinicalData": {
-                "studyOID": "BS1234",
-                "metaDataVersionOID": "v2",
-
+```json
+"clinicalData": {
+        "studyOID": "BS1234",
+        "metaDataVersionOID": "v2",
+```
 Can be turned into a single line added to the top of the file that points to the relevant Specification IRI. 
 
 Presence of explicit context makes optional Dataset-JSON content such as `items` and `label` redundant except for dataset ID and itemData
-
-        "@context": "http://localhost:4000/define_BS1234_v2.jsonld"
+```json
+"@context": "http://localhost:4000/transfer_104ab4/define_BS1234_v2.jsonld"
+```
 
 An ID can be added to Dataset-JSON via `@id`. This example comes from the Dataset-JSON hackathon wiki so
-
-        "@id": "https://wiki.cdisc.org/pages/viewpage.action?spaceKey=ODM2&title=Dataset-JSON",
-
+```json
+"@id": "https://wiki.cdisc.org/pages/viewpage.action?spaceKey=ODM2&title=Dataset-JSON",
+```
 
 # 4. Explain object connections through their own contexts
 JSON-LD can be used to describe Dataset-JSON elements explicitly in terms of a shared model
@@ -75,23 +82,25 @@ Different contexts can be applied to the same dataset e.g.
 
 ## Example of how JSON-LD files provide context
 Identify the JSON transfer
-
-        "@id": "./dataset.jsonld",
+```json
+"@id": "./dataset.jsonld",
+```
 
 Explain _precisely_ what each thing means using the definitive schema
-
-        "@type": "http://schema.org/DataCatalog",
-
+```json
+"@type": "http://schema.org/DataCatalog",
+```
 Refer to common context definitions and graphs
-        
-        "dc": "http://purl.org/dc/terms/",
-        "odm": "https://www.cdisc.org/odm-v2-0#",
+```json   
+"dc": "http://purl.org/dc/terms/",
+"odm": "https://www.cdisc.org/odm-v2-0#",
+```
 
 For true self-descriptiveness: link the dataset formally to a Define, transfer, or dev build
-
-    "studyOID" : "https://clinicaltrials.gov/api/get_define?expr=COSA1234"
-    "versionOID" : "https://clinicaltrials.gov/api/get_define?expr=COSA1234"
-
+```json
+"studyOID" : "https://clinicaltrials.gov/api/get_define?expr=COSA1234"
+"versionOID" : "https://clinicaltrials.gov/api/get_define?expr=COSA1234"
+```
 or via reference to a transfer manifest that contains the context; including explicit links to define, source, target, logs
 
     "@context": "BS1234_manifest_202209141025.jsonld"
@@ -106,9 +115,9 @@ This project takes the form of a demonstration node server that performs convers
 Explore the JSON-LD playground, in particular the `Expanded`, `Compacted` and `N-Quads` views.
 
 Remember that the point of the semantic web is to turn _strings_ into _things_. We are transforming the Dataset-JSON content by applying context to it, in this case from a hosted transfer manifest.
-
-    "@base": "http://localhost:4000/transfer_104ab4/DM/",
-
+```json
+"@base": "http://localhost:4000/transfer_104ab4/",
+```
 The `@base` keyword provides a default ID prefix for new undefined terms in the Dataset-JSON file. This file is unique to a particular transfer/datacut, so this is how we identify any of its unique sections.
 
 The metadata on what the _dataset contents_ (as opposed to the Dataset-JSON terms) mean are described by its Define/specification. 
@@ -126,12 +135,12 @@ The `@vocab` keyword implicitly handles new nodes that are generated by the cont
 Use of `@vocab` allows JSON-LD definitions to be referenced from this external source, allowing the `@context` that gets added to Dataset-JSON to remain very small.
 
 [Example here](https://tinyurl.com/5n878as9)
-
-
-        "@context": {
-                "@base": "http://localhost:4000/transfer_104ab4/DM/",
-                "@vocab": "http://localhost:4000/transfer_104ab4/define_BA1234_v2/",
-        }
+```json
+"@context": {
+        "@base": "http://localhost:4000/transfer_104ab4/DM/",
+        "@vocab": "http://localhost:4000/transfer_104ab4/define_BA1234_v2/",
+}
+```
         
 Note that this metadata specification should ideally be publically-available to make the _metadata_ FAIR and interoperable, even when access to the _data contents_ themselves is restricted.
 
@@ -171,6 +180,8 @@ TODO
 [JSON-LD Overview (this project)](json-ld.md)
 
 [JSON-LD Demo Server Setup (this project)](instructions.md)
+
+[Define via Manifest File Demo (this project)](manifest_demo.md)
 
 [Define-LD Overview (in progress)](define-ld.md)
 

@@ -1,14 +1,15 @@
 {
   "@context": {
     "@version": 1.1,
-    "@base": "http://localhost:4000/transfer_104ab4/DM/",
-    "@vocab": "http://localhost:4000/define_BA1234_v2#",
     "schema": "http://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "def": "http://localhost:4000/define#",
+    "@vocab": "def:",
     "id": "@id",
     "ID": "@id",
     "oid": "@id",
     "OID": "@id",
+    "manifest": "@nest",
     "data": "@nest",
     "clinicalData": {
       "@id": "data",
@@ -41,21 +42,21 @@
       "@id": "schema:maxValue",
       "@type": "xsd:nonNegativeInteger"
     },
-    "name": {
-      "@id": "schema:name",
-      "@type": "schema:PropertyValue"
-    },
-    "label": {
-      "@id": "schema:description",
-      "@type": "schema:PropertyValue"
-    },
-    "type": {
-      "@id": "schema:DataType",
-      "@type": "schema:PropertyValue"
-    },
+    "name": "schema:name",
+    "label": "schema:description",
+    "type": "schema:DataType",
     "length": {
       "@id": "xsd:length",
       "@type": "xsd:nonNegativeInteger"
-    }
+    },
+    "fileType": "schema:Class",
+    "fileOID": "schema:identifier",
+    "priorFileOID": "schema:PropertyValue",
+    "creationDateTime": "schema:modifiedTime",
+    "asOfDateTime": "schema:dateCreated",
+    "originator": "schema:creator",
+    "sourceSystem": "schema:SoftWareApplication",
+    "sourceSystemVersion": "schema:softwareVersion",
+    "datasetJsonVersion": "schema:schemaVersion"
   }
 }
