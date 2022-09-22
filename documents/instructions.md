@@ -59,15 +59,11 @@ The expanded form is a primitive Define-LD and can be further contextualized by 
 
 
 # Recommend also taking a look at ...
-[JSON-LD Playground](https://json-ld.org/playground)
-
-[JSON-LD Spec](https://www.w3.org/TR/json-ld11/)
-
-[Open-source Clinical Trial Tools](https://www.glacon.eu/portal/overviewVisual)
-
 [JSON-LD Overview (this project)](json-ld.md)
 
 [JSON-LD Demos (this project)](json-ld_demo.md)
+
+[Define via Manifest File Demo (this project)](manifest_demo.md)
 
 [Define-LD Overview (in progress)](define-ld.md)
 

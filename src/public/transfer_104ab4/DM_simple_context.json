@@ -3,6 +3,9 @@
       "@base": "http://localhost:4000/transfer_104ab4/DM/",
       "@vocab": "http://localhost:4000/transfer_104ab4/define_BS1234_v2#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "ID": "@id",
+      "oid": "@id",
       "OID": "@id",
       "itemData": {
         "@container": "@list",

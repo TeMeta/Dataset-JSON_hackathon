@@ -41,13 +41,13 @@ Together they are more than the sum of their parts, contextualising the data exp
   
 
 Imagine a single line added to the top of your Dataset-JSON data transfer object
-
+```json
     "@context" : "define.json"
-
+```
 This could be also be handled over API for use cases that need a 'single source of truth'
-
+```json
     "@context" : "https://library.cdisc.org/study/COSA/BP12345"
-
+```
 The API approach obviates the need for an accompanying file, addressing one of the criticisms of Define-XML and Dataset-XML
 
 The accessibility of JSON, pointing to single source of truth that links to graphs:
@@ -73,9 +73,6 @@ How JSON-LD links Dataset-JSON content all the way to the semantic web:
 
 7. RDF triples/n-quads can queried, and loaded to your meta-model or graph of your choice
 
-
-
-
 ## Pros of JSON-LD
 * Very simple standard (so much like JSON that you would be forgiven for not realising that you are actually working with RDF)
 * Adds linkages, semantics and context to existing JSON
@@ -99,6 +96,8 @@ How JSON-LD links Dataset-JSON content all the way to the semantic web:
 [JSON-LD Demo Server Setup (this project)](instructions.md)
 
 [JSON-LD Demos (this project)](json-ld_demo.md)
+
+[Define via Manifest File Demo (this project)](manifest_demo.md)
 
 [Define-LD Overview (in progress)](define-ld.md)
 

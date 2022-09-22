@@ -17,62 +17,63 @@ To do this we need to create a context that adds "@type" and "@id" to all struct
 
 The JSON unmarshaller helpfully maps all XML types to `TYPE_NAME` so JSON-LD can interpret these as types via a single line within the JSON-LD `@context`
 
-```js
-        "TYPE_NAME": "@type"
+```json
+"TYPE_NAME": "@type"
 ```
 
 ## Turn the ODM objects into nodes in the JSON-LD Graph by identifying them
 ID can be obtained by the ODM OID e.g.
 
-```js
-        "oid": "@id"
+```json
+"oid": "@id"
 ```
 
 By flagging the appropriate identifiers in the Define as "@id" type, the objects become accessible via these IDs in JSON-LD form.
 
 For example applying this context
 
-```js
-        "oid": "@id",
-        "itemGroupDef": {
-            "@container": ["@id", "@set"],
-            "@id": "def:define2_1_0.ODMcomplexTypeDefinitionItemGroupDef"
-        }
+```json
+"oid": "@id",
+"itemGroupDef": {
+        "@container": ["@id", "@set"],
+        "@id": "def:define2_1_0.ODMcomplexTypeDefinitionItemGroupDef"
+}
 ```
 
 to the Define data
 
-```js
+```json
 "itemGroupDef": [  
-              {
-                "TYPE_NAME": "define2_1_0.ODMcomplexTypeDefinitionItemGroupDef",
-                "oid": "IG.ADADAS",
-                "name": "ADADAS",
-                "repeating": "Yes",
-                "isReferenceData": "No",
+        {
+        "TYPE_NAME": "define2_1_0.ODMcomplexTypeDefinitionItemGroupDef",
+        "oid": "IG.ADADAS",
+        "name": "ADADAS",
+        "repeating": "Yes",
+        "isReferenceData": "No",
 ```
 
 results in a node that can be dereferenced by its identifier when the expanded JSON-LD is re-compacted/framed, as seen here
 
-```js
+```json
  "itemGroupDef": {
     "IG.ADADAS": [
       {
         "isReferenceData": "No",
         "purpose": "Analysis",
         "repeating": "Yes",
+  ...
 ```
 
 ## Map CDISC ODM to JSON-LD for internationalisation in web-based applications
 
 This is based on the JSON-LD documentation and needs testing
 ```js
-        "lang": "@language",
+"lang": "@language",
 
-        "translatedText": {
-            "@container": "@language",
-            "@id": "schema:PropertyValue"
-        }
+"translatedText": {
+        "@container": "@language",
+        "@id": "schema:PropertyValue"
+}
 ```
 
 ## ** MORE WORK NEEDS TO BE DONE ** 
