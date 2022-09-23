@@ -29,7 +29,7 @@ See [Instructions](documents/instructions.md) to set up and run the demo server
 
 See [JSON-LD Overview](documents/json-ld.md) to learn more about how this project proposes to apply JSON-LD to CDISC data and metadata
 
-See [Define via Manifest Demo](manifest_demo.md) to see how Dataset-JSON can reference Define spec explicitly via a single explicit reference to its transfer manifest (replace Define-XML file with a URL)
+See [Define via Manifest Demo](documents/manifest_demo.md) to see how Dataset-JSON can reference Define spec explicitly via a single explicit reference to its transfer manifest (replace Define-XML file with a URL)
 
 See [JSON-LD Demo](documents/json-ld_demo.md) to go through some examples and interact with them via the JSON-LD Playground tool
 
