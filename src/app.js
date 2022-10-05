@@ -28,7 +28,6 @@ app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodie
 // Expose public schema files
 (async () => {
   const dist = __dirname + '/public';
-  const paths = await globby(__dirname + '/public');
   app.use(express.static(dist,
     { extensions: ['json', 'jsonld', 'xsd'] }));
   app.use(serveIndex(dist, { 'icons': true }));

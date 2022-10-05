@@ -1,140 +1,66 @@
 {
-  "@context": {
-    "@vocab": "http://localhost:4000/manifest.jsonld#"
-  },
-  "http://schema.org/Dataset": {
-    "@index": "IG.DM",
-    "http://schema.org/DataFeed": {
-      "@list": [
-        {
-          "@list": [
-            1,
-            "MyStudy",
-            "001",
-            "DM",
-            56
-          ]
-        },
-        {
-          "@list": [
-            2,
-            "MyStudy",
-            "002",
-            "DM",
-            26
-          ]
-        }
-      ]
-    },
-    "http://schema.org/VariableMeasured": [
-      {
-        "@id": "def:ITEMGROUPDATASEQ",
-        "http://schema.org/DataType": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "integer"
-        },
-        "http://schema.org/description": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "Record identifier"
-        },
-        "http://schema.org/name": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "ITEMGROUPDATASEQ"
-        }
+  "@context": "http://localhost:4000/transfer_104ab4/define_BS1234_v2#",
+  "itemGroupData": {
+    "IG.DM": {
+      "itemData": [
+        [
+          1,
+          "MyStudy",
+          "001",
+          "DM",
+          56
+        ],
+        [
+          2,
+          "MyStudy",
+          "002",
+          "DM",
+          26
+        ]
+      ],
+      "items": {
+        "@none": [
+          {
+            "OID": "ITEMGROUPDATASEQ",
+            "type": "integer",
+            "label": "Record identifier",
+            "name": "ITEMGROUPDATASEQ"
+          },
+          {
+            "OID": "IT.STUDYID",
+            "type": "string",
+            "label": "Study identifier",
+            "name": "STUDYID",
+            "length": 7
+          },
+          {
+            "OID": "IT.USUBJID",
+            "type": "string",
+            "label": "Unique Subject Identifier",
+            "name": "USUBJID",
+            "length": 3
+          },
+          {
+            "OID": "IT.DOMAIN",
+            "type": "string",
+            "label": "Domain Identifier",
+            "name": "DOMAIN",
+            "length": 2
+          },
+          {
+            "OID": "IT.AGE",
+            "type": "integer",
+            "label": "Subject Age",
+            "name": "AGE",
+            "length": 2
+          }
+        ]
       },
-      {
-        "@id": "def:IT.STUDYID",
-        "http://schema.org/DataType": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "string"
-        },
-        "http://schema.org/description": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "Study identifier"
-        },
-        "http://schema.org/name": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "STUDYID"
-        },
-        "http://www.w3.org/2001/XMLSchema#length": {
-          "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-          "@value": 7
-        }
-      },
-      {
-        "@id": "def:IT.USUBJID",
-        "http://schema.org/DataType": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "string"
-        },
-        "http://schema.org/description": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "Unique Subject Identifier"
-        },
-        "http://schema.org/name": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "USUBJID"
-        },
-        "http://www.w3.org/2001/XMLSchema#length": {
-          "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-          "@value": 3
-        }
-      },
-      {
-        "@id": "def:IT.DOMAIN",
-        "http://schema.org/DataType": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "string"
-        },
-        "http://schema.org/description": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "Domain Identifier"
-        },
-        "http://schema.org/name": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "DOMAIN"
-        },
-        "http://www.w3.org/2001/XMLSchema#length": {
-          "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-          "@value": 2
-        }
-      },
-      {
-        "@id": "def:IT.AGE",
-        "http://schema.org/DataType": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "integer"
-        },
-        "http://schema.org/description": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "Subject Age"
-        },
-        "http://schema.org/name": {
-          "@type": "http://schema.org/PropertyValue",
-          "@value": "AGE"
-        },
-        "http://www.w3.org/2001/XMLSchema#length": {
-          "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-          "@value": 2
-        }
-      }
-    ],
-    "http://schema.org/description": {
-      "@type": "http://schema.org/PropertyValue",
-      "@value": "Demographics"
-    },
-    "http://schema.org/maxValue": {
-      "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-      "@value": 600
-    },
-    "http://schema.org/name": {
-      "@type": "http://schema.org/PropertyValue",
-      "@value": "DM"
+      "label": "Demographics",
+      "records": 600,
+      "name": "DM"
     }
   },
-  "http://schema.org/MedicalStudy": {
-    "@type": "http://schema.org/code",
-    "@value": "BS1234"
-  },
-  "http://schema.org/Version": "v2"
+  "studyOID": "BS1234",
+  "metaDataVersionOID": "v2"
 }

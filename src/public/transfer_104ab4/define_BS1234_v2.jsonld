@@ -2,9 +2,8 @@
   "@context": [
     {
       "@version": 1.1,
-      "def": "http://localhost:4000/transfer_104ab4/define_BA1234_v2#",
-      "@base": "http://localhost:4000/transfer_104ab4/define_BA1234_v2#",
-      "@vocab": "http://localhost:4000/transfer_104ab4/define_BA1234_v2#",
+      "def": "http://localhost:4000/define#",
+      "@vocab": "def:",
       "schema": "http://schema.org/",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "OID": "@id",
@@ -25,7 +24,7 @@
         "@id": "schema:Version"
       },
       "itemGroupData": {
-        "@container": "@index",
+        "@container": "@id",
         "@id": "schema:Dataset"
       },
       "items": {
@@ -55,6 +54,15 @@
       "length": {
         "@id": "xsd:length",
         "@type": "xsd:nonNegativeInteger"
+      },
+
+      "IG.DM": {
+        "@id": "schema:Dataset",
+        "@type": "@id"
+      },
+      "IG.ADSL": {
+        "@id": "schema:Dataset",
+        "@type": "@id"
       }
     }
   ],

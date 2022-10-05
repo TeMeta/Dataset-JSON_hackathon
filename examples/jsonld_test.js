@@ -13,7 +13,7 @@ async function writeExpandedAndCompacted(sample) {
     const expanded = await jsonld.expand(sample);
     fs.writeFileSync("output_expanded.json", JSON.stringify(expanded, null, 2));
     const compacted = jsonld.compact(expanded, 
-        "http://localhost:4000/manifest#")
+        "http://localhost:4000/transfer_104ab4/define_BS1234_v2#")
         .then(x => {fs.writeFileSync("output_compacted.json", JSON.stringify(x, null, 2))})
 }
 writeExpandedAndCompacted(sample)

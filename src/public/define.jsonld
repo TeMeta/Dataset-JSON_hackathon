@@ -4,7 +4,7 @@
       "@version": 1.1,
       "def": "http://localhost:4000/define#",
       "@base": "def:",
-      "@vocab": "def:",
+      "@vocab": "#",
       "schema": "http://schema.org/",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "id": "@id",
@@ -33,7 +33,7 @@
       },
       "items": {
         "@container": "@index",
-        "@id": "items"
+        "@id": "schema:VariableMeasured"
       },
       "itemData": {
         "@container": "@list",
@@ -58,7 +58,32 @@
       "originator": "schema:creator",
       "sourceSystem": "schema:SoftWareApplication",
       "sourceSystemVersion": "schema:softwareVersion",
-      "datasetJsonVersion": "schema:schemaVersion"
+      "datasetJsonVersion": "schema:schemaVersion",
+
+      "define2_1_0.ODMcomplexTypeDefinitionItemDef": "schema:VariableMeasured",
+      "define2_1_0.ODMcomplexTypeDefinitionItemGroupDef": "schema:Dataset",
+      "define2_1_0.ODMcomplexTypeDefinitionMethodDef": "schema:measurementTechnique",
+      "define2_1_0.ODMcomplexTypeDefinitionItemRef": "schema:VariableMeasured",
+      "define2_1_0.ODMcomplexTypeDefinitionCodeListDef": "schema:DefinedTermSet",
+      "define2_1_0.ODMcomplexTypeDefinitionCodeListRef": "schema:DefinedTermSet",
+      "define2_1_0.ODMcomplexTypeDefinitionCodeList": "schema:DefinedTermSet",
+      "define2_1_0.ODMcomplexTypeDefinitionExternalCodeList": "schema:DefinedTermSet",
+      "define2_1_0.ODMcomplexTypeDefinitionCodeListItem": "schema:DefinedTerm",
+      "define2_1_0.ODMcomplexTypeDefinitionDecode": "schema:alternateName",
+      "define2_1_0.ODMcomplexTypeDefinitionTranslatedText": "schema:alternateName",
+
+      "itemOID": {
+        "@id": "schema:identifier",
+        "@type": "@id"
+      },
+      "methodOID": {
+        "@id": "schema:identifier",
+        "@type": "@id"
+      },
+      "codelistOID": {
+        "@id": "schema:identifier",
+        "@type": "@id"
+      }
     }
   ],
 

@@ -32,5 +32,8 @@
     "serve-index": "^1.9.1",
     "sync-fetch": "^0.4.1",
     "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
   }
 }
