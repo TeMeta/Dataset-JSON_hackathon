@@ -7,6 +7,8 @@ const fs = require("fs")
 const cors = require("cors")
 const helpers = require("./utils/helpers")
 const serveIndex = require("serve-index")
+const { application } = require("express")
+const ld = require('../src/utils/define_ld_helpers.js');
 
 const app = express()
 module.exports = app
@@ -75,6 +77,27 @@ app.post("/compact", (req, res) => {
     })();
 })
 
+
+// Access methods for the Define
+async function define(){
+  d = await ld.defineLD(
+  module.path +'/../examples/define_example_adam.json', debug=false)
+  return d
+}
+
+// Get variable metadata for a given dataset
+// ?dataset=IG.ASDL
+app.get('/transfer_104ab4/variables', (req, res) => {
+  (async () => {
+    // This is on-demand using a prepared file
+    // Users could also upload Define-XML and convert using 
+    // To avoid waits, perform any upload and conversion in the background when Define is chosen or updated
+    var define_json_spec = await define()
+    var vars = define_json_spec.getVariablesForDataset(req.query.dataset)
+    res.send(vars)
+  })();
+})
+
 // Get all Endpoints that were registered
 app.get('/routes', (req, res) => {
   routeList = app._router.stack
@@ -84,6 +107,7 @@ app.get('/routes', (req, res) => {
       + ' ' + r.route.path)
   res.send(routeList.join("<br />"))
 })
+
 
 // // catch-all (put this at the end of the calls)
 // app.get("/*", (req, res) => {
