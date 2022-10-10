@@ -33,8 +33,8 @@ def get_variables_from_define(dataset):
     return response.json()
 
 # Run tests
-# wget "https://github.com/cdisc-org/DataExchange-DatasetJson/blob/master/examples/sdtm/lb.json?raw=True" -O dataset.json
-path_of_big_file = 'dataset.json'
+#wget "https://github.com/cdisc-org/DataExchange-DatasetJson/blob/master/examples/sdtm/lb.json?raw=True" -O lb.json
+path_of_big_file = 'lb.json'
 
 start = time.time()
 with open(path_of_big_file, 'rb') as input_file:
@@ -60,3 +60,23 @@ print(f"Parse: {1000*(end - start)} ms")
 # ~280MB 345312 rows:     Whole File: 2580ms    Parse 10 rows: 90ms
 # Is it worth using column metadata from API? (~300ms worth it for files >50MB)
 # Rule of thumb finding: When streaming, it is worth obtaining column metadata separately e.g. over API when file >50MB
+
+# For benchmarking, create a local large file by multiplying versions of a smaller source file
+# Handle with care, and make sure to clean up after yourself
+# @examples: grow_dataset_json('lb.json', 'bigger_dummy.json', dataset='IG.LB', factor=10)
+def grow_dataset_json(source, target, dataset, factor=10):
+    with open(source, 'rb') as input_file:
+        loaded_file = json.load(input_file)
+        source_items = loaded_file['clinicalData']['itemGroupData'][dataset]['itemData']
+        print("Source number of rows: " + str(len(source_items)))
+
+        bigger = loaded_file
+        bigger_data = []
+        for i in range(0, factor):
+            bigger_data.extend(source_items)
+        bigger['clinicalData']['itemGroupData']['IG.LB']['itemData'] = bigger_data
+        bigger['clinicalData']['itemGroupData']['IG.LB']['records'] = len(bigger_data)
+
+        print(f"Writing {len(bigger_data)} rows to {target}")
+        with open(target, 'w') as output_file:
+            json.dump(bigger, output_file, ensure_ascii=False, indent=4)
