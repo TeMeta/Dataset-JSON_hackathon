@@ -15,4 +15,4 @@ async function test(xmlPath) {
     return define
 }
 console.log(module.path)
-test(`${module.path}/define_example_adam.xml`)
+test(`./define_example_adam.xml`)

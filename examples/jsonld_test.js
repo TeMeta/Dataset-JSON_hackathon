@@ -11,9 +11,9 @@ sample["@context"] = "http://localhost:4000/transfer_104ab4/define_BS1234_v2#"
 async function writeExpandedAndCompacted(sample) {
     // const json_context = fetch('http://localhost:4000/dataset.jsonld').json()
     const expanded = await jsonld.expand(sample);
-    fs.writeFileSync("output_expanded.json", JSON.stringify(expanded, null, 2));
+    fs.writeFileSync("src/public/output_expanded.json", JSON.stringify(expanded, null, 2));
     const compacted = jsonld.compact(expanded, 
         "http://localhost:4000/transfer_104ab4/define_BS1234_v2#")
-        .then(x => {fs.writeFileSync("output_compacted.json", JSON.stringify(x, null, 2))})
+        .then(x => {fs.writeFileSync("src/public/output_compacted.json", JSON.stringify(x, null, 2))})
 }
 writeExpandedAndCompacted(sample)

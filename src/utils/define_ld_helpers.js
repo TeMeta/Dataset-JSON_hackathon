@@ -148,7 +148,7 @@ async function defineLD(sourceDefineJson, contextRef, debug=true) {
 
     // Expanded context is an RDF graph from which to frame the API views
     const expanded = await ld.customExpand(sample)
-    // if (debug) fs.writeFileSync("output_expanded_define.json", JSON.stringify(expanded, null, 2))
+    if (debug) fs.writeFileSync("src/public/output_expanded_define.json", JSON.stringify(expanded, null, 2))
 
     // Reduce the content according to compactor context
     // Unintended changes when 'round-tripping' expansion and compaction of the same
@@ -161,7 +161,7 @@ async function defineLD(sourceDefineJson, contextRef, debug=true) {
     compacted['@context'] = contextRef
 
     // Note that stringify does not capture functions. Functions need adding again to stored objects
-    // if (debug) fs.writeFileSync("output_compacted_define.json", JSON.stringify(compacted, null, 2))
+    if (debug) fs.writeFileSync("src/public/output_compacted_define.json", JSON.stringify(compacted, null, 2))
     return addFunctionsToDefineObject(compacted)
 }
 

@@ -1,0 +1,55 @@
+[
+  {
+    "http://schema.org/dateCreated": [
+      {
+        "@value": "2012-04-22T00:00:01.511Z"
+      }
+    ],
+    "http://schema.org/modifiedTime": [
+      {
+        "@value": "2012-04-23T18:25:43.511Z"
+      }
+    ],
+    "http://schema.org/schemaVersion": [
+      {
+        "@value": "v0.1"
+      }
+    ],
+    "http://schema.org/identifier": [
+      {
+        "@value": "transfer_104ab4"
+      }
+    ],
+    "http://schema.org/Class": [
+      {
+        "@value": "Dataset-JSON"
+      }
+    ],
+    "http://schema.org/creator": [
+      {
+        "@value": "COSA Dataset-JSON Hackathon"
+      }
+    ],
+    "http://schema.org/PropertyValue": [
+      {
+        "@value": "transfer_25b200"
+      }
+    ],
+    "http://schema.org/SoftWareApplication": [
+      {
+        "@value": "node server"
+      }
+    ],
+    "http://schema.org/softwareVersion": [
+      {
+        "@value": "124.51.52.5552"
+      }
+    ],
+    "http://schema.org/MedicalStudy": [
+      {
+        "@type": "http://schema.org/code",
+        "@value": "BS1234"
+      }
+    ]
+  }
+]

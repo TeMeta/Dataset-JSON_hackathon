@@ -13,8 +13,8 @@ async function test_sample_with_manifest(sample) {
     ld.readContext(sample)
         .then(x => {
             console.log(JSON.stringify(x.expanded, null, 2));
-            fs.writeFileSync("output_expanded.json", JSON.stringify(x.expanded, null, 2));
-            fs.writeFileSync("output_compacted.json", JSON.stringify(x.compacted, null, 2));
+            fs.writeFileSync("src/public/output_expanded.json", JSON.stringify(x.expanded, null, 2));
+            fs.writeFileSync("src/public/output_compacted.json", JSON.stringify(x.compacted, null, 2));
         })
 }
 test_sample_with_manifest(sample)
@@ -26,8 +26,8 @@ async function test_manifest_content(manifest) {
     ld.readContext(manifest)
         .then(m => {
             console.log(JSON.stringify(m.expanded, null, 2));
-            fs.writeFileSync("output_expanded_manifest.json", JSON.stringify(m.expanded, null, 2));
-            fs.writeFileSync("output_compacted_manifest.json", JSON.stringify(m.compacted, null, 2));
+            fs.writeFileSync("src/public/output_expanded_manifest.json", JSON.stringify(m.expanded, null, 2));
+            fs.writeFileSync("src/public/output_compacted_manifest.json", JSON.stringify(m.compacted, null, 2));
         })
 }
 test_manifest_content(manifest)

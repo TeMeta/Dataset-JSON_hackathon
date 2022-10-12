@@ -1,0 +1,55 @@
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/DataFeed> _:c14n1 .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/VariableMeasured> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.AGE> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/VariableMeasured> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.DOMAIN> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/VariableMeasured> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.STUDYID> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/VariableMeasured> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.USUBJID> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/VariableMeasured> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/description> "Demographics"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/maxValue> "600"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/name> "DM"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.AGE> <http://schema.org/DataType> "integer"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.AGE> <http://schema.org/description> "Subject Age"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.AGE> <http://schema.org/name> "AGE"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.AGE> <http://www.w3.org/2001/XMLSchema#length> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.DOMAIN> <http://schema.org/DataType> "string"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.DOMAIN> <http://schema.org/description> "Domain Identifier"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.DOMAIN> <http://schema.org/name> "DOMAIN"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.DOMAIN> <http://www.w3.org/2001/XMLSchema#length> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.STUDYID> <http://schema.org/DataType> "string"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.STUDYID> <http://schema.org/description> "Study identifier"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.STUDYID> <http://schema.org/name> "STUDYID"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.STUDYID> <http://www.w3.org/2001/XMLSchema#length> "7"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.USUBJID> <http://schema.org/DataType> "string"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.USUBJID> <http://schema.org/description> "Unique Subject Identifier"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.USUBJID> <http://schema.org/name> "USUBJID"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.USUBJID> <http://www.w3.org/2001/XMLSchema#length> "3"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ> <http://schema.org/DataType> "integer"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ> <http://schema.org/description> "Record identifier"^^<http://schema.org/PropertyValue> .
+<http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ> <http://schema.org/name> "ITEMGROUPDATASEQ"^^<http://schema.org/PropertyValue> .
+_:c14n0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:c14n0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n10 .
+_:c14n1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:c14n0 .
+_:c14n1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n3 .
+_:c14n10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "MyStudy" .
+_:c14n10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n7 .
+_:c14n11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "DM" .
+_:c14n11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n2 .
+_:c14n12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "DM" .
+_:c14n12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n4 .
+_:c14n2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "56"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:c14n2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:c14n3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:c14n8 .
+_:c14n3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:c14n4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "26"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:c14n4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:c14n5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "002" .
+_:c14n5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n12 .
+_:c14n6 <http://schema.org/Dataset> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> .
+_:c14n6 <http://schema.org/MedicalStudy> "BS1234"^^<http://schema.org/code> .
+_:c14n6 <http://schema.org/Version> "v2" .
+_:c14n7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "001" .
+_:c14n7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n11 .
+_:c14n8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:c14n8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n9 .
+_:c14n9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "MyStudy" .
+_:c14n9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:c14n5 .

@@ -1,6 +1,6 @@
 {
   "@context": "http://localhost:4000/define_spec_context#",
-  "oid": "MDV.TDF_ADaM.CDISC_ADaM.2.1",
+  "oid": "MDV.TDF_ADaM.CDISC ADaM.2.1",
   "methodDef": {
     "MT.ADAE.ADURN": [
       {
@@ -36180,8 +36180,8 @@
       }
     ]
   },
-  "studyOID": "TDF_ADaM.CDISC_ADaM.2.1",
-  "metaDataVersionOID": "MDV.TDF_ADaM.CDISC_ADaM.2.1",
+  "studyOID": "TDF_ADaM.CDISC ADaM.2.1",
+  "metaDataVersionOID": "MDV.TDF_ADaM.CDISC ADaM.2.1",
   "description": "Test datasets created by updating existing CDISCPILOT ADaM datasets",
   "name": "Study TDF_ADaM Data Definitions"
 }

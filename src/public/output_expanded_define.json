@@ -59311,7 +59311,7 @@
     ],
     "http://schema.org/Version": [
       {
-        "@id": "MDV.TDF_ADaM.CDISC_ADaM.2.1"
+        "@id": "MDV.TDF_ADaM.CDISC ADaM.2.1"
       }
     ],
     "def:define2_1_0.ODMcomplexTypeDefinitionMethodDef": [
@@ -121528,7 +121528,7 @@
         "@value": "Study TDF_ADaM Data Definitions"
       }
     ],
-    "@id": "MDV.TDF_ADaM.CDISC_ADaM.2.1",
+    "@id": "MDV.TDF_ADaM.CDISC ADaM.2.1",
     "def:studyDescription": [
       {
         "@value": "Test datasets created by updating existing CDISCPILOT ADaM datasets"
@@ -121542,7 +121542,7 @@
     "http://schema.org/MedicalStudy": [
       {
         "@type": "http://schema.org/code",
-        "@value": "TDF_ADaM.CDISC_ADaM.2.1"
+        "@value": "TDF_ADaM.CDISC ADaM.2.1"
       }
     ],
     "def:studyProtocol": [

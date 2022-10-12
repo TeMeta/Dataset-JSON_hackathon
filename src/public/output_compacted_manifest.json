@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "http://localhost:4000/manifest#",
+    {
+      "@vocab": "http://localhost:4000/define#"
+    }
+  ],
+  "fileType": "Dataset-JSON",
+  "studyOID": "BS1234",
+  "priorFileOID": "transfer_25b200",
+  "sourceSystem": "node server",
+  "originator": "COSA Dataset-JSON Hackathon",
+  "asOfDateTime": "2012-04-22T00:00:01.511Z",
+  "fileOID": "transfer_104ab4",
+  "creationDateTime": "2012-04-23T18:25:43.511Z",
+  "datasetJsonVersion": "v0.1",
+  "sourceSystemVersion": "124.51.52.5552"
+}

@@ -15,11 +15,11 @@ async function main() {
     algorithm: 'URDNA2015',
     format: 'application/n-quads'
   });
-  fs.writeFileSync('output_rdf_normalised.json', canonized)
+  fs.writeFileSync('src/public/output_rdf_normalised.json', canonized)
 
   // serialize a document to N-Quads (RDF)
   const nquads = await jsonld.toRDF(doc, { format: 'application/n-quads' });
-  fs.writeFileSync('output_rdf_simple.json', nquads)
+  fs.writeFileSync('src/public/output_rdf_simple.json', nquads)
 
   console.log('RDF files created')
 }
