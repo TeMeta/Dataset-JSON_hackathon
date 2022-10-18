@@ -43,7 +43,7 @@ See [Define-LD Overview](documents/define-ld.md) (in progress) to see how JSON-L
 
 Experiment with [Streaming JSON-LD in Python test](examples/stream_test.py) to benchmark streaming various sizes of dataset-JSON files with and without import from JSON-LD-powered Define API
 
-### Transfer to [compacted](src/public/output_compacted.json), [expanded](src/public/output_expanded.json), and [RDF](src/public/output_rdf_normalised.nq) formats by including a JSON-LD `@context`
+### Transform to [compacted](src/public/output_compacted.json), [expanded](src/public/output_expanded.json), and [RDF](src/public/output_rdf_normalised.nq) formats by including a JSON-LD `@context`
 Click the respective formats to see this in action (as shown in video below)
 ![Video showing Define and Dataset transformations to linked data](images/define-ld.gif)
 
