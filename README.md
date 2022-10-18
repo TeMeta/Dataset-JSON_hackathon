@@ -1,6 +1,6 @@
-# JSON-LD for CDISC
+# CDISC Over Linked Data (JSON-LD)
 
-This repository should be used for the [CDISC Open Source Alliance&#39;s Dataset-JSON Hackathon](https://wiki.cdisc.org/display/DSJSONHACK) to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
+This repository should be used for the [CDISC Open Source Alliance's Dataset-JSON Hackathon](https://wiki.cdisc.org/display/DSJSONHACK) to contain code, minutes, notes, outcomes, discussions and more. It is meant to allow anyone working with the results and discussions to allow flexible collaboration and follow up projects.
 
 <p align="middle">
     <img src="./images/cosa-logo.png" alt="CDISC Open Source Alliance logo" width="100"/>
@@ -10,11 +10,11 @@ This repository should be used for the [CDISC Open Source Alliance&#39;s Dataset
 
 ## Description
 
-The main purpose of Dataset-JSON Define-LD demo is to investigate ways in which the
-`<a href="https://json-ld.org/" title="JSON-LD"><img style="border:0px;" width="88" src="https://json-ld.org/images/json-ld-button-88.png" alt="JSON-LD-logo-88"/>``</a>` format can be leveraged in tandem with CDISC Datasets as JSON.
+The main purpose of this project is to investigate ways in which the 
+<a href="https://json-ld.org/" title="JSON-LD"><img style="border:0px;" width="88" src="https://json-ld.org/images/json-ld-button-88.png" alt="JSON-LD-logo-88"/></a> format can be leveraged in tandem with CDISC Datasets as JSON.
 
-* [Dataset-JSON](https://wiki.cdisc.org/display/DSJSONHACK) is a new format being designed for a more interoperable way to communicate clinical data.
-* [JSON-LD](https://www.w3.org/TR/json-ld11/) may be able to complete the picture.
+* [Dataset-JSON](https://wiki.cdisc.org/display/DSJSONHACK) is a new format being designed for a more interoperable way to communicate clinical data. 
+* [JSON-LD](https://www.w3.org/TR/json-ld11/) may be able to complete the picture. 
 
 **By imagining Dataset-JSON as the compacted form of a JSON-LD graph, a single machine-readable reference included in the Dataset-JSON can provide a complete description of the transfer.**
 
@@ -43,11 +43,11 @@ See [Define-LD Overview](documents/define-ld.md) (in progress) to see how JSON-L
 
 Experiment with [Streaming JSON-LD in Python test](examples/stream_test.py) to benchmark streaming various sizes of dataset-JSON files with and without import from JSON-LD-powered Define API
 
-### Including a JSON-LD `@context` to JSON enables transformation to [compacted](src/public/output_compacted.json), [expanded](src/public/output_expanded.json), and [RDF](src/public/output_rdf_normalised.nq) format
+### Transfer to [compacted](src/public/output_compacted.json), [expanded](src/public/output_expanded.json), and [RDF](src/public/output_rdf_normalised.nq) formats by including a JSON-LD `@context`
 Click the respective formats to see this in action (as shown in video below)
 ![Video showing Define and Dataset transformations to linked data](images/define-ld.gif)
 
-### RDF transformed from Dataset-JSON via JSON-LD
+### Dataset-JSON transformed to RDF via JSON-LD
 ```
 <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/VariableMeasured> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ> .
 <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> <http://schema.org/description> "Demographics"^^<http://schema.org/PropertyValue> .
@@ -62,6 +62,14 @@ Click the respective formats to see this in action (as shown in video below)
 <http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ> <http://schema.org/name> "ITEMGROUPDATASEQ"^^<http://schema.org/PropertyValue> .
 _:b0 <http://schema.org/Dataset> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> .
 ```
+
+## Conclusions and next steps
+So far we have shown JSON-LD as a means of transforming Define-JSON and Dataset-JSON into a graph.
+
+JSON-LD brings Dataset and Define together explicitly by turning IDs and references into graph nodes and connections with universally unique IDs
+
+Next steps: PoC expression of Define in JSON-LD `@graph` form to provides a semantic blueprint layer to the Define specifications with well-defined nodes and relations
+
 
 ## Contribution
 
