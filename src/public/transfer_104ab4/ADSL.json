@@ -1,0 +1,24 @@
+{
+  "clinicalData": {
+    "studyOID": "BS1234",
+    "metaDataVersionOID": "v2",
+    "itemGroupData": {
+        "IG.ASDL": {
+            "records": 600,
+            "name": "ADSL",
+            "label": "Subject-Level Analysis",
+            "items": [                      
+                {"OID": "ITEMGROUPDATASEQ", "name": "ITEMGROUPDATASEQ", "label": "Record identifier", "type": "integer"},
+                {"OID": "IT.ADSL.STUDYID", "name": "STUDYID", "label": "Study identifier", "type": "string", "length": 7},
+                {"OID": "IT.ADSL.USUBJID", "name": "USUBJID", "label": "Unique Subject Identifier", "type": "string", "length": 3},
+                {"OID": "IT.ADSL.DOMAIN", "name": "DOMAIN", "label": "Domain Identifier", "type": "string", "length": 2},
+                {"OID": "IT.ADSL.AGE", "name": "AGE", "label": "Subject Age", "type": "integer", "length": 2}
+            ],
+            "itemData": [
+                [1, "MyStudy", "001", "ADSL", 56],
+                [2, "MyStudy", "002", "ADSL", 26]
+            ]
+        }
+    }
+  }
+}

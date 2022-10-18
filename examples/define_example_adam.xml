@@ -6,15 +6,15 @@
      xmlns:def="http://www.cdisc.org/ns/def/v2.0"
      ODMVersion="1.3.2"
      FileType="Snapshot"
-     FileOID="TDF_ADaM.CDISC_ADaM.2.1"
+     FileOID="TDF_ADaM.CDISC ADaM.2.1"
      CreationDateTime="2018-11-19T08:44:02">
-   <Study OID="TDF_ADaM.CDISC_ADaM.2.1">
+   <Study OID="TDF_ADaM.CDISC ADaM.2.1">
       <GlobalVariables>
          <StudyName>TDF_ADaM</StudyName>
          <StudyDescription>Test datasets created by updating existing CDISCPILOT ADaM datasets</StudyDescription>
          <ProtocolName>TDF_Datasets</ProtocolName>
       </GlobalVariables>
-      <MetaDataVersion OID="MDV.TDF_ADaM.CDISC_ADaM.2.1" Name="Study TDF_ADaM Data Definitions"
+      <MetaDataVersion OID="MDV.TDF_ADaM.CDISC ADaM.2.1" Name="Study TDF_ADaM Data Definitions"
                        Description="Test datasets created by updating existing CDISCPILOT ADaM datasets"
                        def:DefineVersion="2.0.0"
                        def:StandardName="CDISC ADaM"

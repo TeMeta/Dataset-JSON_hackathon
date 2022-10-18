@@ -3,7 +3,7 @@ const convert = require(path.join(module.path,'..','src','utils','convert.js'))
 const helpers = require(path.join(module.path,'..','src','utils','helpers.js'))
 
 const xmlUrl = 'https://raw.githubusercontent.com/phuse-org/phuse-scripts/master/data/adam/TDF_ADaM_v1.0/define.xml'
-const xmlPath = './define_example_adam.xml'
+const xmlPath = 'examples/define_example_adam.xml'
 
 async function downloadAndConvert(){
     await helpers.downloadFile(xmlUrl, xmlPath)

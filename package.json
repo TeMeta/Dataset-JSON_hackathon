@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon start src/server.js",
+    "start": "nodemon start --ignore 'src/public/*' --ignore '_demo/*' src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -32,5 +32,8 @@
     "serve-index": "^1.9.1",
     "sync-fetch": "^0.4.1",
     "xhr2": "^0.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
   }
 }

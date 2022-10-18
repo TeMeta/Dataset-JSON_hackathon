@@ -27,12 +27,12 @@
       "@id": "schema:Version"
     },
     "itemGroupData": {
-      "@container": "@index",
+      "@container": "@id",
       "@id": "schema:Dataset"
     },
     "items": {
       "@container": "@index",
-      "@id": "items"
+      "@id": "schema:VariableMeasured"
     },
     "itemData": {
       "@container": "@list",

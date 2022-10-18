@@ -1,7 +1,7 @@
 // Serialise Dataset-JSON example file into RDF via expanded JSON-LD
 // Look at the outputs created by running this script
-// * output_rdf_normalised.json
-// * output_rdf_simple.json
+// * output_rdf_normalised.nq
+// * output_rdf_simple.nq
 
 const fs = require('fs')
 const jsonld = require('jsonld')
@@ -15,11 +15,11 @@ async function main() {
     algorithm: 'URDNA2015',
     format: 'application/n-quads'
   });
-  fs.writeFileSync('output_rdf_normalised.json', canonized)
+  fs.writeFileSync('src/public/output_rdf_normalised.nq', canonized)
 
   // serialize a document to N-Quads (RDF)
   const nquads = await jsonld.toRDF(doc, { format: 'application/n-quads' });
-  fs.writeFileSync('output_rdf_simple.json', nquads)
+  fs.writeFileSync('src/public/output_rdf_simple.nq', nquads)
 
   console.log('RDF files created')
 }
