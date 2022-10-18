@@ -28,7 +28,7 @@
         "@id": "schema:Version"
       },
       "itemGroupData": {
-        "@container": "@index",
+        "@container": "@id",
         "@id": "schema:Dataset"
       },
       "items": {

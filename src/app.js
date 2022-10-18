@@ -16,7 +16,7 @@ module.exports = app
 // Set this to your client server if testing locally
 app.use(
   cors({
-    origin: "http://localhost:3000"
+    origin: "http://localhost:4000"
   })
 )
 

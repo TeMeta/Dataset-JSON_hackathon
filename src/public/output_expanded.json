@@ -48,31 +48,27 @@
         ],
         "http://schema.org/VariableMeasured": [
           {
-            "@id": "http://localhost:4000/transfer_104ab4/define_BS1234_v2/ITEMGROUPDATASEQ",
+            "@id": "ITEMGROUPDATASEQ",
             "http://schema.org/description": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "Record identifier"
               }
             ],
             "http://schema.org/name": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "ITEMGROUPDATASEQ"
               }
             ],
             "http://schema.org/DataType": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "integer"
               }
             ]
           },
           {
-            "@id": "http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.STUDYID",
+            "@id": "IT.STUDYID",
             "http://schema.org/description": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "Study identifier"
               }
             ],
@@ -84,22 +80,19 @@
             ],
             "http://schema.org/name": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "STUDYID"
               }
             ],
             "http://schema.org/DataType": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "string"
               }
             ]
           },
           {
-            "@id": "http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.USUBJID",
+            "@id": "IT.USUBJID",
             "http://schema.org/description": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "Unique Subject Identifier"
               }
             ],
@@ -111,22 +104,19 @@
             ],
             "http://schema.org/name": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "USUBJID"
               }
             ],
             "http://schema.org/DataType": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "string"
               }
             ]
           },
           {
-            "@id": "http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.DOMAIN",
+            "@id": "IT.DOMAIN",
             "http://schema.org/description": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "Domain Identifier"
               }
             ],
@@ -138,22 +128,19 @@
             ],
             "http://schema.org/name": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "DOMAIN"
               }
             ],
             "http://schema.org/DataType": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "string"
               }
             ]
           },
           {
-            "@id": "http://localhost:4000/transfer_104ab4/define_BS1234_v2/IT.AGE",
+            "@id": "IT.AGE",
             "http://schema.org/description": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "Subject Age"
               }
             ],
@@ -165,13 +152,11 @@
             ],
             "http://schema.org/name": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "AGE"
               }
             ],
             "http://schema.org/DataType": [
               {
-                "@type": "http://schema.org/PropertyValue",
                 "@value": "integer"
               }
             ]
@@ -179,13 +164,11 @@
         ],
         "http://schema.org/description": [
           {
-            "@type": "http://schema.org/PropertyValue",
             "@value": "Demographics"
           }
         ],
         "http://schema.org/name": [
           {
-            "@type": "http://schema.org/PropertyValue",
             "@value": "DM"
           }
         ],
@@ -195,7 +178,7 @@
             "@value": 600
           }
         ],
-        "@id": "http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM"
+        "@id": "IG.DM"
       }
     ],
     "http://schema.org/Version": [

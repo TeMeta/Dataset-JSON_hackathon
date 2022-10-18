@@ -1,5 +1,10 @@
 {
-  "@context": "http://localhost:4000/transfer_104ab4/define_BS1234_v2#",
+  "@context": [
+    "http://localhost:4000/manifest#",
+    {
+      "@vocab": "http://localhost:4000/define#"
+    }
+  ],
   "itemGroupData": {
     "IG.DM": {
       "itemData": [
@@ -21,34 +26,34 @@
       "items": {
         "@none": [
           {
-            "OID": "ITEMGROUPDATASEQ",
+            "ID": "ITEMGROUPDATASEQ",
             "type": "integer",
             "label": "Record identifier",
             "name": "ITEMGROUPDATASEQ"
           },
           {
-            "OID": "IT.STUDYID",
+            "ID": "IT.STUDYID",
             "type": "string",
             "label": "Study identifier",
             "name": "STUDYID",
             "length": 7
           },
           {
-            "OID": "IT.USUBJID",
+            "ID": "IT.USUBJID",
             "type": "string",
             "label": "Unique Subject Identifier",
             "name": "USUBJID",
             "length": 3
           },
           {
-            "OID": "IT.DOMAIN",
+            "ID": "IT.DOMAIN",
             "type": "string",
             "label": "Domain Identifier",
             "name": "DOMAIN",
             "length": 2
           },
           {
-            "OID": "IT.AGE",
+            "ID": "IT.AGE",
             "type": "integer",
             "label": "Subject Age",
             "name": "AGE",

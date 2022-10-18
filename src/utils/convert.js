@@ -1,5 +1,6 @@
 const Jsonix = require('jsonix').Jsonix;
 const fs = require('fs')
+const util = require('util')
 
 // Unmarshall (convert XML to JSON) a XML file based on its schema
 // Any referenced xsd schema must be accessible
@@ -8,7 +9,7 @@ const fs = require('fs')
 // @param jsonTarget path of target file to create
 // @param mapperPath path of mapping .js file
 // @return null, conversion side-effect creates .json file 
-exports.xmlToJson = function(xmlSource, jsonTarget, mapperPath) {
+exports.xmlToJson = util.promisify(function(xmlSource, jsonTarget, mapperPath) {
 
     var x  = mapperPath.split('/').pop().replace('.js', '')
     var mappingSchema = require(mapperPath)[x];
@@ -16,7 +17,7 @@ exports.xmlToJson = function(xmlSource, jsonTarget, mapperPath) {
     var context = new Jsonix.Context([mappingSchema]);
     var unmarshaller = context.createUnmarshaller();
     
-    unmarshaller.unmarshalFile(xmlSource,
+    return unmarshaller.unmarshalFile(xmlSource,
         // This callback function will be provided
         // with the result of the unmarshalling
         function (unmarshalled) {
@@ -31,4 +32,4 @@ exports.xmlToJson = function(xmlSource, jsonTarget, mapperPath) {
                     console.log(jsonTarget + " created successfully")
                 })
         });    
-}
+})
