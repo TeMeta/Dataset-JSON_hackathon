@@ -8,7 +8,7 @@ This repository should be used for the [CDISC Open Source Alliance's Dataset-JSO
     <img src="./images/json-ld-logo.svg" alt="JSON-LD logo" width="100"/>
 </p>
 
-## Description
+## <a id="description">Description</a>
 
 The main purpose of this project is to investigate ways in which the 
 <a href="https://json-ld.org/" title="JSON-LD"><img style="border:0px;" width="88" src="https://json-ld.org/images/json-ld-button-88.png" alt="JSON-LD-logo-88"/></a> format can be leveraged in tandem with CDISC Datasets as JSON.
@@ -64,6 +64,8 @@ _:b0 <http://schema.org/Dataset> <http://localhost:4000/transfer_104ab4/define_B
 ```
 
 ### <a id="define">WTF is Define?</a>
+*TLDR: Define is a detailed machine-readable dataset spec that can be used as part of a data contract. [Back to top](#description)*
+
 Archived trial data is useless unless it can be understood and recreated, so the role of CDISC is to define a shared [Findable, Accessible, Interoperable and Reusable](https://www.nature.com/articles/sdata201618) way of communicating and storing research. 
 
 The data model behind CDISC has a format for communication called "Define" to formally-describe the included datasets i.e. in this submission/transfer, what was included and what it means. 
@@ -87,7 +89,7 @@ Define **is**
 
 
 ## Conclusions and next steps
-JSON-LD is a powerful means of transforming JSON into a graph by adding a `@context` reference to the relevant served reference.
+JSON-LD is a powerful means of transforming JSON into a graph by adding an explicit `@context` referencing served semantic definitions.
 
 JSON-LD brings Dataset-JSON and Define-JSON together explicitly by turning IDs and references into graph nodes and connections with universally unique IDs
 
@@ -97,7 +99,7 @@ This project shows that combined with Dataset-JSON and JSON-LD, Define **could b
 * a transfer manifest
 * a graph
 
-Next research direction: by [expressing Define as a JSON-LD context](https://github.com/TeMeta/define-ld) that accompanies Dataset-JSON, can the Define *become* the semantic context for any size/shape/type/source of Dataset-JSON that references it? E.g. JSON-LD `@graph` and context that maps data into well-defined nodes
+Next research direction: by [expressing Define as a JSON-LD context](https://github.com/TeMeta/define-ld) that accompanies Dataset-JSON, can the Define *become* the semantic context for any size/shape/type/source of Dataset-JSON that references it? E.g. JSON-LD `@graph` and context that maps data into well-defined nodes, with support for linking to Biomedical Concepts metamodel.
 
 
 ## Contribution
