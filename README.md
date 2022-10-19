@@ -16,17 +16,17 @@ The main purpose of this project is to investigate ways in which the
 * [Dataset-JSON](https://wiki.cdisc.org/display/DSJSONHACK) is a new format being designed for a more interoperable way to communicate clinical data. 
 * [JSON-LD](https://www.w3.org/TR/json-ld11/) may be able to complete the picture. 
 
-**By imagining Dataset-JSON as the compacted form of a JSON-LD graph, a single machine-readable reference included in the Dataset-JSON can provide a complete description of the transfer.**
+**By imagining Dataset-JSON as the compacted form of a JSON-LD graph, a single machine-readable reference included in the Dataset-JSON provides a complete description of the meaning behind the data in your transfer**
 
 ```js
 "@context": "https://mdr.cdisc.org/transfer_104ab4/define_BS1234_v2#"
 ```
 
-The referenced address would be the Define (or a transfer manifest referencing the Define) in the form of a JSON-LD, contextualising the Dataset-JSON contents into ODMv2 graph form
+The referenced address would be the [Define](#define) (or a transfer manifest referencing the Define) in the form of a JSON-LD, contextualising the Dataset-JSON contents into ODMv2 graph form
 
-By changing the format of Define from XML to JSON-LD context & graph, the Define is served as a common spec that can be referenced *explicitly* from Dataset-JSON (as opposed to *implicitly* via `metadataVersionOID`)
+By changing the format of [Define](#define) from XML to JSON-LD context & graph, the Define is served as a common spec that can be referenced *explicitly* from Dataset-JSON (as opposed to *implicitly* via `metadataVersionOID`)
 
-### Dataset-JSON can reference Define via a explicit reference to your transfer manifest (using JSON-LD)
+### Dataset-JSON can reference [Define](#define) via a explicit reference to your transfer manifest (using JSON-LD)
 ![Video showing Dataset-JSON referencing Define explicitly via a manifest](images/manifest.gif)
 
 Have your cake and eat it! Simple streamable datasets for transport, linked explicitly to a single source of truth. A complete metadata picture that allows the data to be queried and exported as a graph
@@ -63,12 +63,41 @@ Click the respective formats to see this in action (as shown in video below)
 _:b0 <http://schema.org/Dataset> <http://localhost:4000/transfer_104ab4/define_BS1234_v2/IG.DM> .
 ```
 
+### <a id="define">WTF is Define?</a>
+Archived trial data is useless unless it can be understood and recreated, so the role of CDISC is to define a shared [Findable, Accessible, Interoperable and Reusable](https://www.nature.com/articles/sdata201618) way of communicating and storing research. 
+
+The data model behind CDISC has a format for communication called "Define" to formally-describe the included datasets i.e. in this submission/transfer, what was included and what it means. 
+
+Regulatory authorities globally have mandated the first released format "Define-XML" to accompany any submission data.
+
+Many have approached Define as an annoying piece of bureaucracy that adds work at the end of the trial. Those people are causing their own problems by focusing on the requirement itself rather asking than the more important: *what is it that regulators find so useful about Define?*
+
+Define is **not**
+* a post-mortem
+* esoteric, only interesting to librarians
+* different from your dataset specifications
+* a single-use, unobtainable .xml file in a .zip file in a secure transfer to regulators
+
+Define **is**
+* the blueprint for your trial outputs
+* instructions for creation of datasets i.e. should come *before* dataset creation, can drive automation
+* useful config and interface between apps and data
+* a universal, non-proprietary language for dataset specification that is understandable by both machines and humans (with the right tools)
+* instructions for re-use and recreation of trial data for scientists of the future
+
+
 ## Conclusions and next steps
-So far we have shown JSON-LD as a means of transforming Define-JSON and Dataset-JSON into a graph.
+JSON-LD is a powerful means of transforming JSON into a graph by adding a `@context` reference to the relevant served reference.
 
-JSON-LD brings Dataset and Define together explicitly by turning IDs and references into graph nodes and connections with universally unique IDs
+JSON-LD brings Dataset-JSON and Define-JSON together explicitly by turning IDs and references into graph nodes and connections with universally unique IDs
 
-Next steps: PoC expression of Define in JSON-LD `@graph` form to provides a semantic blueprint layer to the Define specifications with well-defined nodes and relations
+This project shows that combined with Dataset-JSON and JSON-LD, Define **could be**
+* a Data Contract a.k.a. Data Transfer Agreement, DTA
+* a single source of truth accessible over API
+* a transfer manifest
+* a graph
+
+Next research direction: by [expressing Define as a JSON-LD context](https://github.com/TeMeta/define-ld) that accompanies Dataset-JSON, can the Define *become* the semantic context for any size/shape/type/source of Dataset-JSON that references it? E.g. JSON-LD `@graph` and context that maps data into well-defined nodes
 
 
 ## Contribution
