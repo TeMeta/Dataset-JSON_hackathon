@@ -74,8 +74,8 @@ def grow_dataset_json(source, target, dataset, factor=10):
         bigger_data = []
         for i in range(0, factor):
             bigger_data.extend(source_items)
-        bigger['clinicalData']['itemGroupData']['IG.LB']['itemData'] = bigger_data
-        bigger['clinicalData']['itemGroupData']['IG.LB']['records'] = len(bigger_data)
+        bigger['clinicalData']['itemGroupData'][dataset]['itemData'] = bigger_data
+        bigger['clinicalData']['itemGroupData'][dataset]['records'] = len(bigger_data)
 
         print(f"Writing {len(bigger_data)} rows to {target}")
         with open(target, 'w') as output_file:
